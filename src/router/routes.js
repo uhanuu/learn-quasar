@@ -12,6 +12,8 @@ const routes = [
         path: 'classes-variables',
         component: () => import('pages/ClassesVariables.vue'),
       },
+      { path: 'flex-grid-1', component: () => import('pages/FlexGrid1.vue') },
+      { path: 'flex-grid-2', component: () => import('pages/FlexGrid2.vue') },
     ],
   },
 

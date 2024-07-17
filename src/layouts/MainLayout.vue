@@ -59,12 +59,6 @@ const toggleDarkMode = () => {
   $q.localStorage.set('darkMode', $q.dark.isActive);
 };
 
-// const init = () => {
-//   const isDarkMode = $q.localStorage.getItem('darkMode');
-//   $q.dark.set(isDarkMode);
-// };
-// init();
-
 const linksList = [
   {
     title: 'Typography',
@@ -95,6 +89,18 @@ const linksList = [
     caption: 'quasar.dev',
     icon: 'school',
     to: '/classes-variables',
+  },
+  {
+    title: 'Flex Grid 1',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/flex-grid-1',
+  },
+  {
+    title: 'Flex Grid 2',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/flex-grid-2',
   },
 ];
 
