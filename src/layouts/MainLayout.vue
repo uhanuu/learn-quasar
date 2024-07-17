@@ -62,6 +62,12 @@ const linksList = [
     icon: 'school',
     to: '/Spacing',
   },
+  {
+    title: 'Breakpoints',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/breakpoints',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
