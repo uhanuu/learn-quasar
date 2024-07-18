@@ -115,6 +115,12 @@ const linksList = [
     icon: 'school',
     to: '/flex-grid-1',
   },
+  {
+    title: 'Form Handling',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/form-handling',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
