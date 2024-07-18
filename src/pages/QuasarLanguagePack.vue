@@ -21,6 +21,14 @@
         {{ $q.lang }}
       </div>
     </section>
+
+    <section class="q-mb-xl">
+      <div class="text-h4">i18n - locale</div>
+      <q-separator class="q-my-md" />
+      <div>locale - {{ locale }}</div>
+      <div>hello - {{ t('hello') }}</div>
+      <div>productName - {{ t('productName') }}</div>
+    </section>
   </q-page>
 </template>
 <script>
@@ -40,13 +48,16 @@ const langOptions = appLanguages.map(lang => ({
 <script setup>
 import { useQuasar } from 'quasar';
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const $q = useQuasar();
 const lang = ref($q.lang.isoName);
+const { t, locale } = useI18n();
 
 watch(lang, val => {
   import(`../../node_modules/quasar/lang/${val}.js`).then(lang => {
-    $q.lang.set(lang.default);
+    $q.lang.set(lang.default); // 퀘이사 내부 컴포넌트 언어 변경
+    locale.value = val; // 자체 컴포넌트 언어 변경
     $q.localStorage.set('lang', val);
   });
 });
