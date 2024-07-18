@@ -16,10 +16,22 @@
         <!-- darkmode -->
         <q-btn flat round dense :icon="darkModeIcon" @click="toggleDarkMode" />
         <!-- instagram avatar -->
-        <q-btn round size="sm" class="q-ml-md" to="/profile">
+        <q-btn round size="sm" class="q-ml-md">
           <q-avatar>
             <img src="/this-logo.png" />
           </q-avatar>
+          <!-- offset props를 통해서 간격을 벌릴 수 있다. [x축, y축] -->
+          <q-menu :offset="[0, 10]">
+            <q-list style="min-width: 100px">
+              <q-item clickable v-close-popup to="/profile">
+                <q-item-section>프로필</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup to="/auth/sign-in">
+                <q-item-section>로그아웃</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
         </q-btn>
       </q-toolbar>
     </q-header>
@@ -50,7 +62,7 @@
 <script setup>
 import { computed, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
-import { is, useQuasar } from 'quasar';
+import { useQuasar } from 'quasar';
 
 defineOptions({
   name: 'MainLayout',
