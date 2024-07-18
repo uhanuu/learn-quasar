@@ -13,7 +13,24 @@ const routes = [
         component: () => import('pages/ClassesVariables.vue'),
       },
       { path: 'flex-grid-1', component: () => import('pages/FlexGrid1.vue') },
-      { path: 'flex-grid-2', component: () => import('pages/FlexGrid2.vue') },
+      {
+        path: 'profile',
+        component: () => import('pages/profile/ProfilePage.vue'),
+        children: [
+          {
+            path: '',
+            component: () => import('pages/profile/ProfilePosts.vue'),
+          },
+          {
+            path: 'saved',
+            component: () => import('pages/profile/ProfileSaved.vue'),
+          },
+          {
+            path: 'tagged',
+            component: () => import('pages/profile/ProfileTagged.vue'),
+          },
+        ],
+      },
     ],
   },
   {
