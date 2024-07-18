@@ -32,7 +32,6 @@
             <!-- https://quasar.dev/vue-components/input#mask -->
             <q-input
               filled
-              v-model="card"
               label="Card"
               mask="#### #### #### ####"
               fill-mask="#"

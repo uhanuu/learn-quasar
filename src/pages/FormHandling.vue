@@ -87,7 +87,10 @@
 
 <!-- 비동기적으로 유효성 검사(이메일 체크, 서버와 통신하는 유효성 검사) https://quasar.dev/vue-components/input#async-rules -->
 <script setup>
+import { useQuasar } from 'quasar';
 import { ref } from 'vue';
+
+const $q = useQuasar();
 
 const myForm = ref(null);
 const form = ref({
@@ -125,7 +128,11 @@ const onSubmit = () => {
     alert('동의해주세요');
     return;
   }
-  alert('저장 완료되었습니다.');
+  $q.loading.show({});
+  setTimeout(() => {
+    $q.loading.hide();
+    alert('저장 완료되었습니다.');
+  }, 3000);
 };
 const onReset = () => {
   form.value.title = '';
