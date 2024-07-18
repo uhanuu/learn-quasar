@@ -23,6 +23,7 @@ module.exports = configure(function (/* ctx */) {
       'constants',
       'loading-plugin',
       'loading-bar-plugin',
+      'quasar-lang-pack',
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -89,6 +90,8 @@ module.exports = configure(function (/* ctx */) {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     framework: {
+      // https://github.com/quasarframework/quasar/tree/dev/ui/lang
+      lang: 'ko-KR',
       cssAddon: true,
       config: {
         screen: {
