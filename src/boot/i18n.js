@@ -1,4 +1,4 @@
-import { LocalStorage } from 'quasar';
+import { Quasar, LocalStorage } from 'quasar';
 import { boot } from 'quasar/wrappers';
 import { createI18n } from 'vue-i18n'; // index.html 읽어오기 때문
 import messages from 'src/i18n';
@@ -7,7 +7,7 @@ import messages from 'src/i18n';
 // npm install --save vue-i18n@next
 // https://quasar.dev/options/app-internationalization#setup-manually
 export default boot(async ({ app }) => {
-  const locale = LocalStorage.getItem('lang') || 'ko-KR';
+  const locale = LocalStorage.getItem('lang') || Quasar.lang.isoName;
   const i18n = createI18n({
     locale,
     messages,
