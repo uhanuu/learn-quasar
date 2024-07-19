@@ -110,7 +110,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['LocalStorage', 'Loading', 'LoadingBar'],
+      plugins: ['LocalStorage', 'Loading', 'LoadingBar', 'Meta'],
       // loading 전역으로 셋팅하기 https://quasar.dev/quasar-plugins/loading#default-options
       config: {
         // boot 파일로 처리함

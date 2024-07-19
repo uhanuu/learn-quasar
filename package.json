@@ -1,8 +1,8 @@
 {
   "name": "learn-quasar",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "A Quasar 활용",
+  "productName": "Haen2 Quasar 학습",
   "author": "uhanuu <hwryu990927@gmail.com>",
   "private": true,
   "scripts": {
