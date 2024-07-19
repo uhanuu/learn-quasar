@@ -66,7 +66,7 @@ const routes = [
     path: '/youtube',
     component: () => import('layouts/youtube/Index.vue'),
     children: [
-      { path: '', component: () => import('pages/Youtube/IndexPage.vue') },
+      { path: '', component: () => import('pages/youtube/IndexPage.vue') },
     ],
   },
 
